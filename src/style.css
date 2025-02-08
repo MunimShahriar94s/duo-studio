@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Numans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: PP mori;
+  src: url(assets/fonts/ppmori.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #f0f2f2;
+}
+
+.follow-div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #edbfff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  z-index: 900;
+  pointer-events: none; /* Prevent the div from interfering with mouse events */
+}
+
+.main {
+  height: 1512.5vh;
+  color: #0f0d0d;
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  width: 100vw;
+  height: 2vh;
+  padding-left: 25px;
+  padding-top: 20px;
+  z-index: 100;
+  border-color: #f0f2f2;
+}
+
+.navbar > img.logo {
+  height: 22px;
+}
+
+.navbar > .links {
+  display: flex;
+  justify-content: space-between;
+  transform: translate(-15%);
+  gap: 0.5vw;
+  font-family: "Nunito Sans", serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+}
+
+.navbar .link:nth-child(1) {
+  border-bottom: 0.5px solid;
+  height: 17px;
+}
+
+.navbar .link{
+  mix-blend-mode: difference;
+}
+
+.navbar > .credits {
+  height: 22px;
+  width: 22px;
+  background-color: #f0f2f2;
+  border-radius: 50%;
+  transform: translate(-300%);
+  mix-blend-mode: difference;
+}
+
+#background {
+  position: fixed;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0d0d;
+  z-index: -5;
+  margin-top: 0;
+}
+
+#background > .text-display {
+  font-family: PP mori;
+  font-size: 7vw;
+  max-height: 25vh;
+  word-spacing: -0.5vw;
+  width: 70vw;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  background-color: #0f0d0d;
+}
+
+.text-display > div {
+  display: flex;
+  color: #f0f2f2;
+}
+
+.text-display > div:nth-child(1) {
+  justify-content: start;
+}
+
+.text-display > div:nth-child(2) {
+  justify-content: end;
+}
+
+.pages {
+  position: relative;
+  height: 300vh;
+  transform: translate(0, 40%);
+  background-color: #0f0d0d;
+}
+
+#page1 {
+  background-color: transparent;
+  width: 40vw;
+  margin-left: 30vw;
+}
+#page1 > video {
+  width: 100%;
+}
+
+#page2 {
+  width: 100%;
+  font-family: PP mori;
+  margin-top: 5vw;
+  border-bottom: 2px solid #0f0d0d;
+}
+
+#page2 > .grid-container {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#page2 > .heading {
+  font-size: 2.8vw;
+  font-weight: 900;
+  margin-left: 5.8vw;
+  width: 60vw;
+  text-transform: uppercase;
+}
+
+#page2 > .heading > .part1 {
+  width: 80vw;
+  margin: 0;
+}
+#page2 > .heading > .part2 {
+  width: 50vw;
+}
+
+#page2 .links {
+  margin-left: 5.8vw;
+  margin-top: 10vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#page2 .links .link {
+  border-top: #0f0d0d 2px solid;
+}
+#page2 .links .link:nth-child(3) {
+  border-top: #0f0d0d 2px solid;
+  border-bottom: #0f0d0d 2px solid;
+}
+
+#page2 .link > .title {
+  font-size: 1.65vw;
+  font-weight: 500;
+  margin-top: 1.5vw;
+}
+
+#page2 .link > .paragraph {
+  margin-top: 1vw;
+  font-family: "Montserrat", serif;
+  font-size: 1.25vw;
+  font-weight: 500;
+  width: 80%;
+  margin-bottom: 1.5vw;
+}
+
+#page2 .grid-container > .image {
+  height: 90%;
+  width: 90%;
+  margin: auto;
+  margin-top: -5%;
+  overflow: hidden;
+}
+
+#page2 .image > img {
+  height: 140%;
+  transform: translate(-25%, -30%);
+}
+
+#page3 {
+  height: 300vh;
+  font-family: PP mori;
+  display: grid;
+}
+
+#page3 > .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#page3 .grid-part-1 > .heading {
+  font-size: 8vw;
+  width: 30vw;
+  margin-left: 10vw;
+  margin-top: 2vw;
+}
+
+#page3 .grid-part-1 .wrapper1 {
+  height: 40vw;
+  width: 35vw;
+  overflow: hidden;
+  margin-left: 5vw;
+  margin-bottom: 10vw;
+  margin-top: 10vw;
+}
+#page3 .grid-part-1 .el1 > .caption > .heading {
+  font-size: 2vw;
+}
+
+#page3 .grid-part-1 .el1 > .caption {
+  margin-left: 5vw;
+  margin-top: -8vw;
+  font-size: 1.25vw;
+}
+
+#page3 .grid-part-1 .wrapper1 > img {
+  height: 120%;
+  transform: translate(0, -15%);
+}
+
+#page3 .grid-part-1 .wrapper2 {
+  height: 40vw;
+  width: 30vw;
+  overflow: hidden;
+  margin-left: 15vw;
+}
+
+#page3 .grid-part-1 .el2 > .caption > .heading {
+  font-size: 2vw;
+}
+
+#page3 .grid-part-1 .el2 > .caption {
+  margin-left: 5vw;
+  font-size: 1.25vw;
+  margin-top: -8vw;
+}
+
+#page3 .grid-part-1 .el2 {
+  margin-left: 7.5vw;
+}
+
+#page3 .grid-part-2 .el1 {
+  height: 44vw;
+  width: 30vw;
+  overflow: hidden;
+  margin-top: 20vw;
+  margin-left: 15vw;
+}
+
+#page3 .grid-part-2 .el1 video {
+  height: 120%;
+  transform: translate(-10%);
+}
+
+#page3 .grid-part-2 .el2 {
+  margin-top: 15vw;
+  margin-left: 5vw;
+}
+#page3 .grid-part-2 .el2 .wrapper2 {
+  height: 40vw;
+  width: 35vw;
+  overflow: hidden;
+}
+
+#page3 .grid-part-2 .el2 img {
+  height: 120%;
+  transform: translate(0, -20%);
+}
+
+#page3 .grid-part-2 .caption > .heading {
+  font-size: 2vw;
+}
+#page3 .grid-part-2 .caption {
+  margin-top: 2vw;
+}
+
+#page4 {
+  margin-top: 10vw;
+  font-family: PP mori;
+}
+
+#page4 > .title {
+  font-size: 7.5vw;
+  width: 70vw;
+  letter-spacing: -0.5vw;
+  margin-left: 5vw;
+}
+
+#page4 .scroller{
+  display: flex;
+  justify-content: space-between;
+  gap: 30vw;
+  margin-left: 5vw;
+  margin-top: 3vw;
+  width: 250vw;
+  height: fit-content;
+}
+
+#page4 .scroller .scroller-item {
+  display: flex;
+  flex-direction: column;
+
+ 
+}
+
+#page4 .scroller .scroller-item span.label > span{
+  display: inline;
+  border: #f0f2f2 2px solid;
+  border-radius: 2vw;
+  padding: 1vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.25vw;
+ 
+}
+
+#page4 .scroller .scroller-item > div.title {
+  font-size: 3vw;
+  font-weight: 800;
+  width: 40vw;
+  margin-bottom: 4vw;
+  margin-top: 1.5vw;
+  text-transform: uppercase;
+}
+
+#page4 .scroller .scroller-item:nth-child(3) > div.title, #page4 .scroller .scroller-item:nth-child(4) > div.title {
+  font-size: 3vw;
+  font-weight: 800;
+  width: 50vw;
+  text-transform: uppercase;
+}
+
+#page4 .scroller .scroller-item > div.paragraph {
+  font-size: 1.15vw;
+  font-weight: 400;
+  width: 40vw;
+}
+
+.footer{
+  margin-top: 2.5vw;
+}
+
+.footer > img{
+  width: 100vw;
+}
